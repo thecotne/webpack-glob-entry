@@ -1,5 +1,5 @@
 import glob from 'glob'
-import globToRegexp from 'globToRegexp'
+import globToRegexp from 'glob-to-regexp'
 import fromPairs from 'lodash.frompairs'
 
 function entryName (globPattern, path) {
