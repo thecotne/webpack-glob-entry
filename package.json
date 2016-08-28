@@ -22,7 +22,6 @@
   "homepage": "https://github.com/thecotne/webpack-glob-entry#readme",
   "dependencies": {
     "glob": "^7.0.6",
-    "glob-to-regexp": "^0.3.0",
     "lodash.frompairs": "^4.0.1"
   },
   "devDependencies": {

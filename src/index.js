@@ -1,28 +1,29 @@
 import glob from 'glob'
-import globToRegexp from 'glob-to-regexp'
 import fromPairs from 'lodash.frompairs'
 
 function entryName (globPattern, path) {
-  const regExpPattern = globToRegexp(globPattern)
-    .toString()
-    .replace('.*', '(.*)')
-    .slice(1, -1)
-
-  const regExp = new RegExp(regExpPattern)
-
-  return regExp.exec(path)[1]
+  return path
+    .split('/')
+    .pop()
+    .split('.')
+    .shift()
 }
 
-function PatternToEntries (pattern) {
+const PatternToEntries = entryNameFn => pattern => {
   const pairsOfEntries = glob
     .sync(pattern)
-    .map(path => [entryName(pattern, path), path])
+    .map(path => [entryNameFn(pattern, path), path])
 
   return fromPairs(pairsOfEntries)
 }
 
-export default function entry (...patterns) {
-  const entries = patterns.map(PatternToEntries)
+export default function entry (entryNameFn, ...patterns) {
+  if (typeof entryNameFn !== 'function') {
+    patterns.unshift(entryNameFn)
+    entryNameFn = entryName
+  }
+
+  const entries = patterns.map(PatternToEntries(entryNameFn))
 
   return Object.assign(...entries)
 }
