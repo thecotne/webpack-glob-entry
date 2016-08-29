@@ -19,7 +19,7 @@
     "webpack"
   ],
   "author": "cotne nazarashvili <cotne.nazarashvili@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/thecotne/webpack-glob-entry/issues"
   },
