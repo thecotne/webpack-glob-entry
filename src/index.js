@@ -18,9 +18,11 @@ const PatternToEntries = entryNameFn => pattern => {
 }
 
 export default function entry (entryNameFn, ...patterns) {
-  if (typeof entryNameFn !== 'function') {
+  if (entryNameFn instanceof String) {
     patterns.unshift(entryNameFn)
     entryNameFn = entryName
+  } else if (!(entryNameFn instanceof Function)) {
+    throw new TypeError('First parameter of entry must be String or Function')
   }
 
   const entries = patterns.map(PatternToEntries(entryNameFn))
