@@ -2,6 +2,9 @@
   "name": "webpack-glob-entry",
   "description": "webpack glob entry",
   "main": "lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
   "scripts": {
     "test": "eslint src/**.js",
     "build": "babel src -d lib",
