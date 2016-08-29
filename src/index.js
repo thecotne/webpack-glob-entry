@@ -18,7 +18,7 @@ const PatternToEntries = entryNameFn => pattern => {
 }
 
 export default function entry (entryNameFn, ...patterns) {
-  if (entryNameFn instanceof String) {
+  if (typeof entryNameFn === 'string') {
     patterns.unshift(entryNameFn)
     entryNameFn = entryName
   } else if (!(entryNameFn instanceof Function)) {
