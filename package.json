@@ -1,6 +1,6 @@
 {
   "name": "webpack-glob-entry",
-  "description": "webpack glob entry",
+  "description": "simple function to transform glob patterns in webpack entry object",
   "main": "lib/index.js",
   "files": [
     "lib/index.js"
