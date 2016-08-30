@@ -42,6 +42,8 @@
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.4.0",
     "eslint-config-standard": "^6.0.0",
+    "jasmine": "^2.4.1",
+    "mock-fs": "^3.11.0",
     "semantic-release": "^4.3.5"
   },
   "config": {
