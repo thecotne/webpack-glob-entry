@@ -4,6 +4,7 @@
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 [![Travis Build Status](https://img.shields.io/travis/thecotne/webpack-glob-entry.svg?maxAge=2592000&style=flat-square)](https://travis-ci.org/thecotne/webpack-glob-entry)
+[![Coveralls](https://img.shields.io/coveralls/thecotne/webpack-glob-entry.svg?maxAge=2592000&style=flat-square)](https://coveralls.io/github/thecotne/webpack-glob-entry)
 [![NPM Dependencies](https://img.shields.io/david/thecotne/webpack-glob-entry.svg?maxAge=2592000&style=flat-square)](https://david-dm.org/thecotne/webpack-glob-entry)
 [![NPM DevDependencies](https://img.shields.io/david/dev/thecotne/webpack-glob-entry.svg?maxAge=2592000&style=flat-square)](https://david-dm.org/thecotne/webpack-glob-entry?type=dev)
 [![NPM Downloads](https://img.shields.io/npm/dm/webpack-glob-entry.svg?maxAge=2592000&style=flat-square)](https://www.npmjs.com/package/webpack-glob-entry)
