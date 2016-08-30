@@ -1,5 +1,5 @@
 /* eslint-env node, jasmine */
-var entry = require('../lib/index')
+var entry = require('../src/index')
 var mockFs = require('mock-fs')
 var path = require('path')
 
