@@ -3,7 +3,7 @@ module.exports = {
   output: {
     filename: 'index.js',
     path: './lib',
-    libraryTarget: "commonjs"
+    libraryTarget: "commonjs2"
   },
   module: {
     loaders: [
