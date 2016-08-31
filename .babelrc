@@ -1,6 +1,6 @@
 {
-  "presets": ["es2015", "stage-0"],
-  "plugins": ["transform-runtime", "transform-decorators-legacy", "add-module-exports"],
+  "presets": ["es2015"],
+  "plugins": ["add-module-exports"],
   "env": {
     "test": {
       "plugins": ["istanbul"]

@@ -17,15 +17,19 @@ const PatternToEntries = entryNameFn => pattern => {
   return fromPairs(pairsOfEntries)
 }
 
-export default function entry (entryNameFn, ...patterns) {
+export default function entry () {
+  const patterns = Array.from(arguments)
+  let entryNameFn = patterns[0]
+
   if (typeof entryNameFn === 'string') {
-    patterns.unshift(entryNameFn)
     entryNameFn = entryName
-  } else if (!(entryNameFn instanceof Function)) {
+  } else if (entryNameFn instanceof Function) {
+    patterns.shift()
+  } else {
     throw new TypeError('First parameter of entry must be String or Function')
   }
 
   const entries = patterns.map(PatternToEntries(entryNameFn))
 
-  return Object.assign(...entries)
+  return Object.assign.apply(Object, entries)
 }
