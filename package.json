@@ -8,6 +8,8 @@
   "scripts": {
     "lint": "eslint {src,spec}/**.js",
     "test": "cross-env NODE_ENV=test nyc jasmine",
+    "test--lib": "cross-env JASMINE_TEST=lib jasmine",
+    "test--production": "npm run build--production && npm run test--lib",
     "report-coverage": "nyc report --reporter=lcov",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "build": "webpack",
