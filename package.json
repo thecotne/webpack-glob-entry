@@ -44,7 +44,7 @@
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.4.0",
     "eslint-config-standard": "^6.0.0",
-    "jasmine": "^2.5.0",
+    "jasmine": "2.4.x",
     "lodash.frompairs": "^4.0.1",
     "mock-fs": "^3.11.0",
     "nyc": "^8.1.0",
