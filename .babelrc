@@ -1,6 +1,6 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["add-module-exports"],
+  "presets": ["es2015-node4"],
+  "plugins": ["add-module-exports", "transform-do-expressions"],
   "env": {
     "test": {
       "plugins": ["istanbul"]

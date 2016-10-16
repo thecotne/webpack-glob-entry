@@ -16,8 +16,8 @@ script:
   - npm run test
   - npm run report-coverage
   - npm run coveralls
-  - npm run build--production
-  - npm run test--lib
+  - npm run build:production
+  - npm run test:lib
 after_success:
   - npm run semantic-release
 branches:

@@ -1,13 +1,8 @@
 /* eslint-env node, jasmine */
 
-switch (process.env.JASMINE_TEST) {
-  case 'lib':
-    var entry = require('../lib/index')
-    break
-  case 'src':
-  default:
-    var entry = require('../src/index')
-}
+var entry = process.env.JASMINE_TEST === 'lib'
+  ? require('../lib/index')
+  : require('../src/index')
 
 var mockFs = require('mock-fs')
 var path = require('path')
@@ -65,7 +60,7 @@ describe('entry', () => {
       'vendor.entry.js': 'src/vendor.entry.js'
     }
 
-    var result = entry((globPattern, filePath) => path.basename(filePath), 'src/*.entry.js')
+    var result = entry(filePath => path.basename(filePath), 'src/*.entry.js')
 
     expect(result).toEqual(expectedResult)
   })

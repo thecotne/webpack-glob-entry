@@ -1,35 +1,31 @@
 import glob from 'glob'
-import fromPairs from 'lodash.frompairs'
 
-function entryName (globPattern, path) {
-  return path
-    .split('/')
-    .pop()
-    .split('.')
-    .shift()
+const assoc = (key, value, object) => do {
+  object[key] = value
+  object
 }
 
-const PatternToEntries = entryNameFn => pattern => {
-  const pairsOfEntries = glob
-    .sync(pattern)
-    .map(path => [entryNameFn(pattern, path), path])
+const entry = (...patterns) => patterns
+  .map(patternToEntries(do {
+    if (typeof patterns[0] === 'string') entryName
+    else if (typeof patterns[0] === 'function') patterns.shift()
+    else typeError('First parameter of entry must be String or Function')
+  }))
+  .reduce((a, b) => Object.assign(a, b), {})
 
-  return fromPairs(pairsOfEntries)
+const entryName = path => path
+  .split('/')
+  .pop()
+  .split('.')
+  .shift()
+
+const patternToEntries = entryNameFn => pattern => glob
+  .sync(pattern)
+  .map(path => [entryNameFn(path), path])
+  .reduce((object, [key, value]) => assoc(key, value, object), {})
+
+const typeError = message => {
+  throw new TypeError(message)
 }
 
-export default function entry () {
-  const patterns = Array.from(arguments)
-  let entryNameFn = patterns[0]
-
-  if (typeof entryNameFn === 'string') {
-    entryNameFn = entryName
-  } else if (entryNameFn instanceof Function) {
-    patterns.shift()
-  } else {
-    throw new TypeError('First parameter of entry must be String or Function')
-  }
-
-  const entries = patterns.map(PatternToEntries(entryNameFn))
-
-  return Object.assign.apply(Object, entries)
-}
+export default entry

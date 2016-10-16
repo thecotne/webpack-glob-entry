@@ -48,6 +48,6 @@ you can also pass `entryName` function as first argument like this
 var path = require('path')
 
 module.exports = {
-  entry: entry((globPattern, filePath) => path.basename(filePath), 'bar/*.js', 'baz/*.js')
+  entry: entry(filePath => path.basename(filePath), 'bar/*.js', 'baz/*.js')
 }
 ```
