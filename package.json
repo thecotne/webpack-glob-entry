@@ -52,7 +52,7 @@
     "jasmine": "^2.5.2",
     "mock-fs": "^3.11.0",
     "nyc": "^8.3.1",
-    "semantic-release": "^4.3.5"
+    "semantic-release": "^6.3.2"
   },
   "config": {
     "commitizen": {
