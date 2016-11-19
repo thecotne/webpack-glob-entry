@@ -74,4 +74,77 @@ describe('entry', () => {
 
     expect(() => entry(1)).toThrow()
   })
+
+  it('must thorw if first argument is not string or function', () => {
+    mockFs({
+      'src/main.entry.js': '',
+      'src/vendor.entry.js': '',
+      'src/foo/bar.js': ''
+    })
+
+    expect(() => entry(1)).toThrow()
+  })
+})
+
+describe('entry.basePath', () => {
+  afterEach(() => {
+    mockFs.restore()
+  })
+
+  it('should modify entry name (case 1)', () => {
+    mockFs({
+      'src/main.entry.js': '',
+      'src/vendor.entry.js': '',
+      'src/admin/vendor.foo.entry.js': '',
+      'src/foo/bar.js': ''
+    })
+
+    var expectedResult = {
+      'main': 'src/main.entry.js',
+      'vendor': 'src/vendor.entry.js',
+      'admin/vendor': 'src/admin/vendor.foo.entry.js'
+    }
+
+    var result = entry(entry.basePath('src'), 'src/**/*.entry.js')
+
+    expect(result).toEqual(expectedResult)
+  })
+
+  it('should modify entry name (case 2)', () => {
+    mockFs({
+      'src/main.entry.js': '',
+      'src/vendor.entry.js': '',
+      'src/admin/vendor.entry.js': '',
+      'src/foo/bar.js': ''
+    })
+
+    var expectedResult = {
+      'main.entry': 'src/main.entry.js',
+      'vendor.entry': 'src/vendor.entry.js',
+      'admin/vendor.entry': 'src/admin/vendor.entry.js'
+    }
+
+    var result = entry(entry.basePath('src', '.js'), 'src/**/*.entry.js')
+
+    expect(result).toEqual(expectedResult)
+  })
+
+  it('should modify entry name (case 3)', () => {
+    mockFs({
+      'src/main.entry.js': '',
+      'src/vendor.entry.js': '',
+      'src/admin/vendor.entry.js': '',
+      'src/foo/bar.js': ''
+    })
+
+    var expectedResult = {
+      'src/main': 'src/main.entry.js',
+      'src/vendor': 'src/vendor.entry.js',
+      'src/admin/vendor': 'src/admin/vendor.entry.js'
+    }
+
+    var result = entry(entry.basePath(), 'src/**/*.entry.js')
+
+    expect(result).toEqual(expectedResult)
+  })
 })

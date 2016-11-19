@@ -1,4 +1,5 @@
 import glob from 'glob'
+import {basename, dirname, relative} from 'path'
 
 const assoc = (key, value, object) => do {
   object[key] = value
@@ -12,6 +13,29 @@ const entry = (...patterns) => patterns
     else typeError('First parameter of entry must be String or Function')
   }))
   .reduce((a, b) => Object.assign(a, b), {})
+
+entry.basePath = (basePath = '.', ext = null) => fullPath => {
+  const directory = do {
+    const relativePath = relative(basePath, fullPath)
+    const relativeDirName = dirname(relativePath)
+
+    if (relativeDirName === '.') {
+      ''
+    } else {
+      `${relativeDirName}/`
+    }
+  }
+
+  const fileName = do {
+    if (ext) {
+      basename(fullPath, ext)
+    } else {
+      entryName(fullPath)
+    }
+  }
+
+  return directory + fileName
+}
 
 const entryName = path => path
   .split('/')

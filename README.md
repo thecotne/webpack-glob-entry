@@ -51,3 +51,25 @@ module.exports = {
   entry: entry(filePath => path.basename(filePath), 'bar/*.js', 'baz/*.js')
 }
 ```
+
+you can also use `entry.basePath` function as first argument like this
+
+```javascript
+
+module.exports = {
+  entry: entry(entry.basePath(), 'bar/*.js', 'baz/*.js')
+}
+
+# or like this
+
+module.exports = {
+  entry: entry(entry.basePath('src'), 'src/bar/*.js', 'src/baz/*.js')
+}
+
+# or like this
+
+module.exports = {
+  entry: entry(entry.basePath('src', '.js'), 'src/bar/*.some.js', 'src/baz/*.js')
+}
+
+```
