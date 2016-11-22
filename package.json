@@ -51,7 +51,7 @@
     "eslint-plugin-standard": "^2.0.1",
     "jasmine": "^2.5.2",
     "mock-fs": "^3.12.1",
-    "nyc": "^9.0.1",
+    "nyc": "^10.0.0",
     "semantic-release": "^6.3.2"
   },
   "config": {
