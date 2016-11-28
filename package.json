@@ -1,35 +1,40 @@
 {
   "name": "webpack-glob-entry",
   "description": "simple function to transform glob patterns in webpack entry object",
-  "main": "lib/index.js",
+  "keywords": [
+    "webpack"
+  ],
+  "homepage": "https://github.com/thecotne/webpack-glob-entry#readme",
+  "bugs": {
+    "url": "https://github.com/thecotne/webpack-glob-entry/issues"
+  },
+  "license": "MIT",
+  "author": "cotne nazarashvili <cotne.nazarashvili@gmail.com>",
   "files": [
     "lib/index.js"
   ],
-  "scripts": {
-    "lint": "eslint {src,spec}/**.js",
-    "test": "cross-env NODE_ENV=test nyc jasmine",
-    "test:lib": "cross-env JASMINE_TEST=lib jasmine",
-    "test:production": "npm run build:production && npm run test:lib",
-    "report-coverage": "nyc report --reporter=lcov",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "build": "babel src/index.js -o lib/index.js",
-    "build:production": "babel src/index.js -o lib/index.js",
-    "watch": "babel src/index.js -o lib/index.js -w",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
-  },
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/thecotne/webpack-glob-entry.git"
   },
-  "keywords": [
-    "webpack"
-  ],
-  "author": "cotne nazarashvili <cotne.nazarashvili@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thecotne/webpack-glob-entry/issues"
+  "scripts": {
+    "build": "babel src/index.js -o lib/index.js",
+    "build:production": "babel src/index.js -o lib/index.js",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "lint": "eslint {src,spec}/**.js",
+    "report-coverage": "nyc report --reporter=lcov",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "cross-env NODE_ENV=test nyc jasmine",
+    "test:lib": "cross-env JASMINE_TEST=lib jasmine",
+    "test:production": "npm run build:production && npm run test:lib",
+    "watch": "babel src/index.js -o lib/index.js -w"
   },
-  "homepage": "https://github.com/thecotne/webpack-glob-entry#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
   "dependencies": {
     "glob": "^7.1.1"
   },
@@ -53,11 +58,6 @@
     "mock-fs": "^3.12.1",
     "nyc": "^10.0.0",
     "semantic-release": "^6.3.2"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   },
   "nyc": {
     "include": [
