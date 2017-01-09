@@ -4,6 +4,6 @@ engines:
     channel: "eslint-3"
 ratings:
   paths:
-  - **/*.js
+  - "**.js"
 exclude_paths:
 - "test/"
