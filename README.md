@@ -68,13 +68,13 @@ module.exports = {
   entry: entry(entry.basePath(), 'bar/*.js', 'baz/*.js')
 }
 
-# or like this
+// or like this
 
 module.exports = {
   entry: entry(entry.basePath('src'), 'src/bar/*.js', 'src/baz/*.js')
 }
 
-# or like this
+// or like this
 
 module.exports = {
   entry: entry(entry.basePath('src', '.js'), 'src/bar/*.some.js', 'src/baz/*.js')
