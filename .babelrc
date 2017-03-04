@@ -6,7 +6,7 @@
       }
     }]
   ],
-  "plugins": ["add-module-exports", "transform-do-expressions"],
+  "plugins": ["add-module-exports"],
   "env": {
     "test": {
       "plugins": ["istanbul"]
