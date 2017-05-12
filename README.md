@@ -1,7 +1,5 @@
 # webpack-glob-entry
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/webpack-glob-entry.svg)](https://greenkeeper.io/)
-
 [<img src="http://npm.packagequality.com/badge/webpack-glob-entry.png?size=2" alt="Package Quality" width="280" valign="bottom">](http://packagequality.com/#?package=webpack-glob-entry)
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
@@ -9,6 +7,7 @@
 [![Coveralls](https://img.shields.io/coveralls/thecotne/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://coveralls.io/github/thecotne/webpack-glob-entry)
 [![NPM Dependencies](https://img.shields.io/david/thecotne/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://david-dm.org/thecotne/webpack-glob-entry)
 [![NPM DevDependencies](https://img.shields.io/david/dev/thecotne/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://david-dm.org/thecotne/webpack-glob-entry?type=dev)
+[![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/webpack-glob-entry.svg)](https://greenkeeper.io/)
 
 [![bitHound Overall Score](https://www.bithound.io/github/thecotne/webpack-glob-entry/badges/score.svg)](https://www.bithound.io/github/thecotne/webpack-glob-entry)
 [![bitHound Dependencies](https://www.bithound.io/github/thecotne/webpack-glob-entry/badges/dependencies.svg)](https://www.bithound.io/github/thecotne/webpack-glob-entry/master/dependencies/npm)
