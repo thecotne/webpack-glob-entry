@@ -1,5 +1,7 @@
 # webpack-glob-entry
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/webpack-glob-entry.svg)](https://greenkeeper.io/)
+
 [<img src="http://npm.packagequality.com/badge/webpack-glob-entry.png?size=2" alt="Package Quality" width="280" valign="bottom">](http://packagequality.com/#?package=webpack-glob-entry)
 [![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
