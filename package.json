@@ -36,8 +36,6 @@
     }
   },
   "dependencies": {
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^4.2.2",
     "glob": "^7.1.1"
   },
   "devDependencies": {
@@ -53,6 +51,8 @@
     "cz-conventional-changelog": "^2.0.0",
     "eslint": "^3.19.0",
     "eslint-config-standard": "^10.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "jasmine": "^2.5.3",
