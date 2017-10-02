@@ -9,11 +9,6 @@
 [![NPM DevDependencies](https://img.shields.io/david/dev/thecotne/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://david-dm.org/thecotne/webpack-glob-entry?type=dev)
 [![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/webpack-glob-entry.svg)](https://greenkeeper.io/)
 
-[![bitHound Overall Score](https://www.bithound.io/github/thecotne/webpack-glob-entry/badges/score.svg)](https://www.bithound.io/github/thecotne/webpack-glob-entry)
-[![bitHound Dependencies](https://www.bithound.io/github/thecotne/webpack-glob-entry/badges/dependencies.svg)](https://www.bithound.io/github/thecotne/webpack-glob-entry/master/dependencies/npm)
-[![bitHound Dev Dependencies](https://www.bithound.io/github/thecotne/webpack-glob-entry/badges/devDependencies.svg)](https://www.bithound.io/github/thecotne/webpack-glob-entry/master/dependencies/npm)
-[![bitHound Code](https://www.bithound.io/github/thecotne/webpack-glob-entry/badges/code.svg)](https://www.bithound.io/github/thecotne/webpack-glob-entry)
-
 [![npms score](https://badges.npms.io/webpack-glob-entry.svg?style=flat-square)](https://npms.io/search?q=webpack-glob-entry)
 [![NSP Status](https://nodesecurity.io/orgs/thecotne/projects/35280f07-9926-441e-bc86-b4a46ad12f7a/badge)](https://nodesecurity.io/orgs/thecotne/projects/35280f07-9926-441e-bc86-b4a46ad12f7a)
 [![NPM Downloads](https://img.shields.io/npm/dm/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://www.npmjs.com/package/webpack-glob-entry)
