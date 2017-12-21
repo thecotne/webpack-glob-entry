@@ -58,7 +58,7 @@
     "jasmine": "^2.7.0",
     "mock-fs": "^4.4.1",
     "nyc": "^11.1.0",
-    "semantic-release": "^8.0.0"
+    "semantic-release": "^11.0.2"
   },
   "nyc": {
     "include": [
