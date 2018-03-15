@@ -75,14 +75,19 @@ describe('entry', () => {
     expect(() => entry(1)).toThrow()
   })
 
-  it('must thorw if first argument is not string or function', () => {
+  it('should have ability to ignore some files', () => {
     mockFs({
-      'src/main.entry.js': '',
-      'src/vendor.entry.js': '',
-      'src/foo/bar.js': ''
+      'src/foo/foo-script.js': '',
+      'src/bar/bar-script.js': '',
+      'src/baz/baz-script.js': ''
     })
 
-    expect(() => entry(1)).toThrow()
+    var expectedResult = {
+      'foo-script': 'src/foo/foo-script.js',
+      'baz-script': 'src/baz/baz-script.js'
+    }
+
+    expect(entry('src/!(bar)/*.js')).toEqual(expectedResult)
   })
 })
 
