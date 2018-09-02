@@ -1,5 +1,5 @@
 import glob from 'glob'
-import {basename, dirname, relative} from 'path'
+import { basename, dirname, relative } from 'path'
 
 const entry = (...patterns) => {
   if (!['string', 'function'].includes(typeof patterns[0])) {
