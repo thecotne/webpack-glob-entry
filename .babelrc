@@ -1,15 +1,22 @@
 {
   "presets": [
-    ["env", {
-      "targets": {
-        "node": 4
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "node": 8
+        }
       }
-    }]
+    ]
   ],
-  "plugins": ["add-module-exports"],
+  "plugins": [
+    "add-module-exports"
+  ],
   "env": {
     "test": {
-      "plugins": ["istanbul"]
+      "plugins": [
+        "istanbul"
+      ]
     }
   }
 }
