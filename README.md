@@ -10,7 +10,6 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/thecotne/webpack-glob-entry.svg)](https://greenkeeper.io/)
 
 [![npms score](https://badges.npms.io/webpack-glob-entry.svg?style=flat-square)](https://npms.io/search?q=webpack-glob-entry)
-[![NSP Status](https://nodesecurity.io/orgs/thecotne/projects/35280f07-9926-441e-bc86-b4a46ad12f7a/badge)](https://nodesecurity.io/orgs/thecotne/projects/35280f07-9926-441e-bc86-b4a46ad12f7a)
 [![NPM Downloads](https://img.shields.io/npm/dm/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://www.npmjs.com/package/webpack-glob-entry)
 [![NPM Package Version](https://img.shields.io/npm/v/webpack-glob-entry.svg?style=flat-square&maxAge=300)](https://www.npmjs.com/package/webpack-glob-entry)
 
