@@ -20,8 +20,8 @@ describe('entry', () => {
     })
 
     var expectedResult = {
-      'main': 'src/main.entry.js',
-      'vendor': 'src/vendor.entry.js'
+      main: 'src/main.entry.js',
+      vendor: 'src/vendor.entry.js'
     }
 
     var result = entry('src/*.entry.js')
@@ -38,9 +38,9 @@ describe('entry', () => {
     })
 
     var expectedResult = {
-      'main': 'src/main.entry.js',
-      'vendor': 'src/vendor.entry.js',
-      'bar': 'src/foo/bar.js'
+      main: 'src/main.entry.js',
+      vendor: 'src/vendor.entry.js',
+      bar: 'src/foo/bar.js'
     }
 
     var result = entry('src/*.entry.js', 'src/foo/*.js')
@@ -105,8 +105,8 @@ describe('entry.basePath', () => {
     })
 
     var expectedResult = {
-      'main': 'src/main.entry.js',
-      'vendor': 'src/vendor.entry.js',
+      main: 'src/main.entry.js',
+      vendor: 'src/vendor.entry.js',
       'admin/vendor': 'src/admin/vendor.foo.entry.js'
     }
 
