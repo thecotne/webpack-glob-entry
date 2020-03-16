@@ -6,8 +6,9 @@ cache:
 notifications:
   email: false
 node_js:
-  - '8'
   - '10'
+  - '12'
+  - '13'
 install:
   - yarn --ignore-engines
 script:
